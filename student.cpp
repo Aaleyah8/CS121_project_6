@@ -61,4 +61,3 @@ std::string Student::getlastName(){
 std::string Student::getfirstName(){
 	return firstName;
 }
-
