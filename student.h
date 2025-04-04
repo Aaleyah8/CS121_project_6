@@ -8,9 +8,9 @@ class student{
 		studentString;
 		std::string firstName;
 		std::string lastName;
-		Date* dob;
-		Date* expectedGrad;
-		Address* Address;
+		date* dob;
+		date* expectedGrad;
+		address* Address;
 		int creditHours;
 	public:
 		Student();

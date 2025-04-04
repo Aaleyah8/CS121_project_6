@@ -1,4 +1,5 @@
-#include <iostreeam>
+#include <iostream>
+#include <sstream>
 #include "address.h"
 
 Date::Date(){
@@ -6,10 +7,9 @@ Date::Date(){
 	city = " ";
 	state = " ";
 	zip = " ";
-
 }; // end constructor
 
-address::Address(){
+Address::Address(){
 	Address::string street;
 	Address::string city;
 	Address::string state;
@@ -29,6 +29,6 @@ void printAddress(){
 	std::cout << "city: ";
 	std::cout << "state: ";
 	std::cout << "zip: ";
-	std::cout << std::end1;
+	std::cout << std::endl;
 }
 
