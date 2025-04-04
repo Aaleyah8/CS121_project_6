@@ -1,5 +1,6 @@
 #include <iostream> 
-#include "date.h";
+#include <sstream>
+#include "date.h"
 
 Date::Date(){
 	dateString = "0/0/0000";
@@ -8,7 +9,7 @@ Date::Date(){
 	year = 0;
 } // end constructor
 
-date::Date(){
+Date::Date(){
 	date::init(dateString);
 }
 
@@ -17,16 +18,16 @@ void Date::init(std::string dateString){
 	std::string day;
 	std::string year;
 	
-	getline(month, ss);
-	getline(day, ss);
-	getline(year, ss)
+	getline(ss, month, "/");
+	getline(ss, day, "/");
+	getline(ss, year, "/");
 	ss.clear();
-	}
-
+}
+	
 void Date::printDate(){
 	std::cout << "month: ";
 	std::cout << "day: ";
 	std::cout << "year: ";
-	std::cout << std::end1;
+	std::cout << std::endl;
 }
 

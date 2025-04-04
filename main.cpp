@@ -20,7 +20,7 @@ findStudent(std::vector<Student*>& students){
 	} // end if 
 } // end findsStudent
 
-bool compFirst(Student* a, Student* b){
+bool compFirst(student* a, Student* b){
 	return a->getFirstName() b->getFirstName();
 }
 printStudents(std::vector<Student*>& students)
@@ -36,7 +36,7 @@ loadStudents(std::vector<Student*>& students){
 	
 
 delStudents(std::vector<Student*>& students){
-	for (Std::vector, students);
+	for (std::vector, students);
 		delete();
 }
 
@@ -45,7 +45,7 @@ main(){
 	for (input == quit){	
 		std::cout "Print all student names ";
 		std::cout "print all student data ";
-		std::cout "find a student :;
+		std::cout "find a student";
 		ss.clear();
 	} // end for
 } // end main

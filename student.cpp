@@ -35,29 +35,29 @@ void init(studentString){
 }
 
 void Student::printStudent(){
-	Std::cout << firstName << " " << lastName << std::end1;
+	Std::cout << firstName << " " << lastName << std::endl;
 	address -> printAddress();
 	
 	std::cout "DOB: ";
 	dob->printDate();
 	expectedGrad->printDate();
 
-	std::cout << "credits: " << creditHours <<std::end1;
+	std::cout << "credits: " << creditHours <<std::endl;
 	std::cout << "-----------------------------------";
-	sts::cout << std::end1;
-}
+	std::cout << std::endl;
+
  
 std::string Student::getLastFirst(){
 	std::stringstream ss;
 	ss.clear();
 	ss << lastName << ", " << firstName;
 	return ss.str();
-} // endgetLastFirst
+} // end getLastFirst
 
 std::string Student::getlastName(){
-	return lastName;
+	return getLastName;
 }
 
 std::string Student::getfirstName(){
-	return firstName;
+	return getFirstName;
 }

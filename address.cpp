@@ -9,18 +9,20 @@ Date::Date(){
 
 }; // end constructor
 
-adress::Address(){
+address::Address(){
 	Address::string street;
 	Address::string city;
 	Address::string state;
 	Address::string zip;
-}
+ } // end address
+
 void Address::init(std::string street, std::string city, 
 		std::string state, std::string zip){
 	Address::street = street;
 	Address::city = city;
 	Address::state = state;
 	Address::zip = zip;
+}
 
 void printAddress(){
 	std::cout << "street: ";

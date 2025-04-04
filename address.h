@@ -1,5 +1,6 @@
 #ifndef ADDRESS_H_EXISTS
 #define ADDRESS_H_EXISTS
+#endif
 
 class Address{
 	protected:
@@ -9,7 +10,7 @@ class Address{
 		std::string zip;
 	public:
 		Address();
-		void insit(std::string street, std::string city,
+		void init(std::string street, std::string city,
 				std::string state, std::string zip);
 		void printAddress();
 }; // end class def
