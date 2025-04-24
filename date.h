@@ -1,9 +1,10 @@
 #include <string>
-#define DATE_H_EXISTS
-#ifndef DATE_H_EXISTS
-#endif
+#ifndef DATE_H
+#define DATE_H
 
-class Date{
+
+
+class Date {
 	protected:
 		std::string dateString;
 		int month;
@@ -12,5 +13,6 @@ class Date{
 	public:
 		Date();
 		void init(std::string dateString);
-		void printDate();
+		void printDate() const;
 }; // end class def
+#endif // DATE_H

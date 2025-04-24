@@ -1,7 +1,7 @@
 #include <string>
 #ifndef ADDRESS_H_EXISTS
 #define ADDRESS_H_EXISTS
-#endif
+
 
 class Address{
 	protected:
@@ -15,4 +15,4 @@ class Address{
 				std::string state, std::string zip);
 		void printAddress();
 }; // end class def
-
+#endif

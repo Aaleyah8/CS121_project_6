@@ -4,30 +4,17 @@
 
 Date::Date(){
 	dateString = "0/0/0000";
-	month = 0;
-	day = 0;
-	year = 0;
+	init(dateString);
 } // end constructor
 
-Date::Date(){
-	date::init(dateString);
-}
-
 void Date::init(std::string dateString){
-	std::string month;
-	std::string day;
-	std::string year;
-	
+	std::stringstream ss(dateString);
 	getline(ss, month, "/");
 	getline(ss, day, "/");
 	getline(ss, year, "/");
-	ss.clear();
 }
 	
-void Date::printDate(){
-	std::cout << "month: ";
-	std::cout << "day: ";
-	std::cout << "year: ";
-	std::cout << std::endl;
+void Date::printDate() const {
+	std::cout << "Date: " << month << "/" << day << "/" << year << std::endl;
 }
 

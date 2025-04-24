@@ -1,6 +1,8 @@
 #include <iostream>
 #include <sstream>
+
 #include "address.h"
+#include <string>
 
 Date::Date(){
 	street = " ";

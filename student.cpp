@@ -1,63 +1,67 @@
 #include <iostream>
+#include <sstream>
 #include "student.h"
 
 Student::Student(){
-	studentString = " ";
+	studentID = " ";
 	firstName = " ";
 	lastName = " ";
 	dob = new Date(); 
 	expectedGrad = new Date();
-	Address = new Adress();
+	address = new Address();
 	creditHours = 0;
 } // end constructor
 
-student::Student(std::string studentString){
-	student::init(StudentString);
+Student::Student(std::string studentID, std::string firstName, std::string lastName, Date* dob, Date* expectedGrad, Address* address, int creditHours){
+	this->studentID = studentID;
+	this->firstName = firstName;
+	this->lastName = lastName;
+	this->dob = dob;
+	this->expectedGrad = expectedGrad;
+	this->address = address;
+	this->creditHours = creditHours;
 }
 
-Student::-Student(){
+Student::~Student(){
 	delete dob;
 	delete expectedGrad;
-	delete Adress;
+	delete address;
 } // end constructor
-
-void init(studentString){
-	std::string street;
-	std::string city;
-	std::string state;
-	std::string zip;
-
-	getline(street, ss);
-	getline(city, ss);
-	getline(state, ss);
-	getline(zip, ss);
-	ss.clear();
+ 
+void Student::init(std::string studentID, std::string firstName, std::string lastName, Date* dob, Date* expectedGrad, Address* address, int creditHours){
+	this->studentID = studentID;
+	this->firstName = firstName;
+	this->lastName = lastName;
+	this->dob = dob;
+	this->expectedGrad = expectedGrad;
+	this->address = address;
+	this->creditHours = creditHours;
 }
 
-void Student::printStudent(){
-	Std::cout << firstName << " " << lastName << std::endl;
-	address -> printAddress();
+void Student::printStudent() const{
+	std::cout << firstName << " " << lastName << std::endl;
+	address->printAddress();
 	
-	std::cout "DOB: ";
+	std::cout << "DOB: ";
 	dob->printDate();
 	expectedGrad->printDate();
 
 	std::cout << "credits: " << creditHours <<std::endl;
 	std::cout << "-----------------------------------";
 	std::cout << std::endl;
-
+}
  
-std::string Student::getLastFirst(){
+std::string Student::getLastFirst() const {
 	std::stringstream ss;
-	ss.clear();
 	ss << lastName << ", " << firstName;
+	ss.clear();
 	return ss.str();
 } // end getLastFirst
 
-std::string Student::getlastName(){
-	return getLastName;
+std::string Student::getLastName() const {
+	return lastName;
 }
 
-std::string Student::getfirstName(){
-	return getFirstName;
+std::string Student::getFirstName() const{
+	return firstName;
 }
